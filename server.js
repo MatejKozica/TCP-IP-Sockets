@@ -14,9 +14,8 @@ const serverSocket = new net.createServer(conn => {
         if (err) {
           throw err;
         }
-        console.log(stdout);
+        conn.write(stdout);
       });
-      conn.write("Give me more");
     }
   });
 });
