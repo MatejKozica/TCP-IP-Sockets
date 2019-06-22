@@ -16,6 +16,7 @@ client.connect(port, host, () => {
 });
 
 client.on("data", data => {
+  console.log(data.toString());
   rl.question("Command: ", command => {
     client.write(command);
   });
